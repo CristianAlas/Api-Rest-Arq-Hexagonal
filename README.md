@@ -51,6 +51,7 @@ El proyecto implementa una **arquitectura hexagonal**, también conocida como **
 - La **interacción con el exterior** (REST, DB) se realiza mediante **adaptadores**.
 - Las **interfaces (ports)** desacoplan la lógica del framework o la base de datos.
 
+```
 ┌──────────────────────────┐
 │ Infrastructure │
 │ (adapters: REST / DB) │
@@ -65,11 +66,12 @@ El proyecto implementa una **arquitectura hexagonal**, también conocida como **
 │ Domain │
 │ (modelos, lógica pura)│
 └──────────────────────────┘
-
+```
 ---
 
 # 📂 Estructura del Proyecto
 
+```
 src/
 └── main/
 └── java/
@@ -86,6 +88,7 @@ src/
 │ └── adapters/
 │ └── input/rest/
 │ └── mapper
+```
 
 ---
 
