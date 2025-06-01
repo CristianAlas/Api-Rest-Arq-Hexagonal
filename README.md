@@ -119,24 +119,25 @@ La aplicación estará disponible en: http://localhost:8080
 
 ## 🔗 Endpoints Principales (ejemplo)
 
-Método	Endpoint	Descripción
-GET	/api/students	Lista todos los estudiantes
-GET	/api/students/{id}	Obtiene un estudiante por ID
-POST	/api/students	Crea un nuevo estudiante
-PUT	/api/students/{id}	Actualiza un estudiante existente
-DELETE	/api/students/{id}	Elimina un estudiante
+```
+Método	Endpoint	Descripción.
+- GET	/api/students	Lista todos los estudiantes.
+- GET	/api/students/{id}	Obtiene un estudiante por ID.
+- POST	/api/students	Crea un nuevo estudiante.
+- PUT	/api/students/{id}	Actualiza un estudiante existente.
+- DELETE	/api/students/{id}	Elimina un estudiante.
+```
 
 ## ⚠️ Manejo de Errores
 Este proyecto implementa manejo global de excepciones usando @ControllerAdvice. Las respuestas de error siguen un formato uniforme:
 
-json
-Copiar
-Editar
+```
 {
   "timestamp": "2025-06-01T12:00:00Z",
   "message": "Student not found with ID: 42",
   "status": 404
 }
+```
 
 ## 🪪 Licencia
 Este proyecto está licenciado bajo la MIT License. Consulta el archivo LICENSE para más detalles.
