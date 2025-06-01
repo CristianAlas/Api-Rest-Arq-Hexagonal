@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: student-service # Nombre de la aplicación Spring Boot
+
+  jackson:
+    default-property-inclusion: non_null    # Ignora propiedades con valor null al serializar JSON
+    property-naming-strategy: SNAKE_CASE    # Convierte nombres de propiedades Java camelCase a snake_case en JSON
+
+  #Configuración para SQL Server
+  datasource:
+    url: ${DB_HOST}             # URL de conexión a la base de datos, se toma de una variable de entorno DB_HOST
+    username: ${DB_USERNAME}    # Usuario de la base de datos, variable de entorno
+    password: ${DB_PASSWORD}    # Contraseña de la base de datos, variable de entorno
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver     # Driver JDBC para SQL Server
+
+  jpa:
+    hibernate:
+      ddl-auto: create      # Al iniciar, Hibernate crea las tablas desde cero (ojo, esto borra datos)
+    show-sql: true          # Muestra las sentencias SQL en consola
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect     # Dialecto de Hibernate para SQL Server
+        format_sql: true      # Formatea el SQL para mejor lectura en consola
+    database-platform: org.hibernate.dialect.SQLServerDialect     # Plataforma DB para Hibernate
+
+logging:
+  level:
+    com.microsoft.sqlserver: DEBUG      # Log DEBUG para la librería del driver SQL Server
+    org.hibernate.SQL: DEBUG            # Log DEBUG para sentencias SQL generadas por Hibernate
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE      # Log TRACE para enlazado de parámetros SQL
