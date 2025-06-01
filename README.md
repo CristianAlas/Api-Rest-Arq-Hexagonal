@@ -120,12 +120,12 @@ La aplicación estará disponible en: http://localhost:8080
 ## 🔗 Endpoints Principales (ejemplo)
 
 ```
-Método	Endpoint	Descripción.
-- GET	/api/students	Lista todos los estudiantes.
-- GET	/api/students/{id}	Obtiene un estudiante por ID.
-- POST	/api/students	Crea un nuevo estudiante.
-- PUT	/api/students/{id}	Actualiza un estudiante existente.
-- DELETE	/api/students/{id}	Elimina un estudiante.
+Método	  Endpoint	               Descripción.
+- GET	    students/v1/api	         Lista todos los estudiantes.
+- GET	    students/v1/api/{id}	   Obtiene un estudiante por ID.
+- POST	  students/v1/api/         Crea un nuevo estudiante.
+- PUT	    students/v1/api/{id}	   Actualiza un estudiante existente.
+- DELETE	students/v1/api/{id}	   Elimina un estudiante.
 ```
 
 ## ⚠️ Manejo de Errores
